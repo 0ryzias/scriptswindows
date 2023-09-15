@@ -17,6 +17,7 @@ goto Fim
 cd /d %ProgramFiles(x86)%\Microsoft Office\Office16
 goto Fim
 
+:Fim
 for /f %x in ('dir /b ..\root\Licenses16\ProPlus2019VL*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
 
 cscript ospp.vbs /setprt:1688
